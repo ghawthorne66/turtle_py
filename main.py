@@ -1,5 +1,6 @@
 
 from turtle import Turtle, Screen
+import random
 
 
 tim = Turtle()
@@ -8,24 +9,40 @@ tim = Turtle()
 tim.shape("turtle")
 tim.color("blue")
 
-# for _ in range(12):
-#     tim.forward(100)
-#     tim.right(90)
+#Draw hexagram
+
+colors = ["teal", "navy", "red", "magenta", "blue", "orange", "purple", "green"]
 
 
-def square():
-    on = True
-    while on:
-        for i in range(8):
-            tim.forward(30)
-            tim.up()
-            tim.forward(10)
-            tim.down()
-
-        tim.right(90)
+def draw_shape(num_sides):
+    angle = 360 / num_sides
+    for _ in range(num_sides):
+        tim.forward(100)
+        tim.right(angle)
 
 
-square()
+for shape_side_n in range(3, 10):
+    tim.color(random.choice(colors))
+    draw_shape(shape_side_n)
+
+# draw_shapes(5)
+
+# Draw Square
+
+# def square():
+#     on = True
+#     while on:
+#         for i in range(8):
+#             tim.forward(30)
+#             tim.up()
+#             tim.forward(10)
+#             tim.down()
+#
+#         tim.right(90)
+#
+#
+# square()
+
 
 
 
