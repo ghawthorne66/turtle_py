@@ -1,28 +1,38 @@
 
 from turtle import Turtle, Screen
 
-timmy_the_turtle = Turtle()
 
-# timmy_the_turtle = t.Turtle()
-timmy_the_turtle.shape("turtle")
-timmy_the_turtle.color("blue")
-timmy_the_turtle.forward(100)
-timmy_the_turtle.right(90)
-timmy_the_turtle.forward(100)
-timmy_the_turtle.right(90)
-timmy_the_turtle.forward(100)
-timmy_the_turtle.right(90)
-timmy_the_turtle.forward(100)
-timmy_the_turtle.right(90)
-timmy_the_turtle.forward(100)
+tim = Turtle()
+
+
+tim.shape("turtle")
+tim.color("blue")
+
+# for _ in range(12):
+#     tim.forward(100)
+#     tim.right(90)
+
+
+def square():
+    on = True
+    while on:
+        for i in range(8):
+            tim.forward(30)
+            tim.up()
+            tim.forward(10)
+            tim.down()
+
+        tim.right(90)
+
+
+square()
+
+
+
 
 # timmy_the_turtle.backward(200)
 # timmy_the_turtle.left(180)
 # timmy_the_turtle.setheading(0)
-
-
-
-
 
 
 
